@@ -1,0 +1,109 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.header * {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1 {
+    font-size: 400%;
+}
+
+p {
+    font-size: 150%;
+}
+
+h1,
+h2,
+p {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.centered {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.blog-page .post-content {
+    overflow: hidden;
+    max-height: 80px;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    position: relative;
+}
+
+.blog-page .full-content {
+    display: none;
+}
+
+.blog-page .expanded {
+    max-height: 9999px;
+}
+
+.blog-page .expanded .full-content {
+    display: block;
+}
+
+.blog-page .full-content {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.blog-page .expanded .full-content {
+    opacity: 1;
+}
+
+.blog-page .date {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.blog-post {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+}
+
+.full-article {
+    display: none;
+    margin-top: 10px;
+}
+
+.read-more {
+    background-color: #999999;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.fade {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    opacity: 0;
+}
+
+.fade.expanded {
+    max-height: 500px;
+    /* Adjust this to the maximum height you expect */
+    opacity: 1;
+    transition: max-height 0.5s ease-in, opacity 0.5s ease-in;
+}
